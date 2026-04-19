@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ressources - ENSI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo">ENSI</div>
+                <div class="logo-text">
+                    <h1>ENSI</h1>
+                    <p>Excellence • Innovation • Avenir</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="professeurs.html">Professeurs</a></li>
+                    <li><a href="etudiants.html">Étudiants</a></li>
+                    <li><a href="ressources.html" class="active">Ressources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <h1>Ressources Pédagogiques</h1>
+        <p>Cours, Devoirs et Matériels d'Étude</p>
+    </section>
+
+    <main class="main-content">
+        <!-- Search and Filter Section -->
+        <section class="resource-filters">
+            <div class="container">
+                <div class="search-container">
+                    <input type="text" id="resourceSearch" placeholder="🔍 Rechercher un cours, un devoir..." class="search-input" >
+                </div>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" >Tous</button>
+                    <button class="filter-btn" >Cours</button>
+                    <button class="filter-btn" >Devoirs</button>
+                    <button class="filter-btn" >Examens</button>
+                    <button class="filter-btn" >Vidéos</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Section -->
+        <section class="courses-section">
+            <div class="container">
+                <h2>📚 Nos Cours</h2>
+                <div class="grid-3">
+                    <!-- Course Card 1 -->
+                    <div class="resource-card course-card" data-type="course">
+                        <div class="card-header">
+                            <span class="course-badge">Cours</span>
+                            <span class="level-badge level-beginner">Débutant</span>
+                        </div>
+                        <h3>Programmation Web avec HTML5 & CSS3</h3>
+                        <div class="instructor">
+                            <span>👨‍🏫 Eng. Noor Abdelrahman</span>
+                        </div>
+                        <p>Maîtrisez les fondamentaux du développement web moderne avec HTML5 et CSS3. Ce cours couvre la structure sémantique, le responsive design et les meilleures pratiques.</p>
+                        <div class="card-meta">
+                            <span>📅 12 semaines</span>
+                            <span>👥 45 étudiants</span>
+                            <span>⭐ 4.8/5</span>
+                        </div>
+                        <div class="card-topics">
+                            <span class="topic-tag">HTML5</span>
+                            <span class="topic-tag">CSS3</span>
+                            <span class="topic-tag">Responsive</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">Accéder au Cours</a>
+                            <a href="#" class="btn btn-secondary">Détails</a>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 2 -->
+                    <div class="resource-card course-card" data-type="course">
+                        <div class="card-header">
+                            <span class="course-badge">Cours</span>
+                            <span class="level-badge level-intermediate">Intermédiaire</span>
+                        </div>
+                        <h3>JavaScript Moderne & ES6+</h3>
+                        <div class="instructor">
+                            <span>👨‍🏫 Eng. Mohamed Saïdi</span>
+                        </div>
+                        <p>Plongez dans JavaScript moderne avec ES6+, les async/await, les Promises et la programmation orientée objet. Développez des applications interactives et dynamiques.</p>
+                        <div class="card-meta">
+                            <span>📅 10 semaines</span>
+                            <span>👥 38 étudiants</span>
+                            <span>⭐ 4.7/5</span>
+                        </div>
+                        <div class="card-topics">
+                            <span class="topic-tag">JavaScript</span>
+                            <span class="topic-tag">ES6+</span>
+                            <span class="topic-tag">DOM</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">Accéder au Cours</a>
+                            <a href="#" class="btn btn-secondary">Détails</a>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 3 -->
+                    <div class="resource-card course-card" data-type="course">
+                        <div class="card-header">
+                            <span class="course-badge">Cours</span>
+                            <span class="level-badge level-advanced">Avancé</span>
+                        </div>
+                        <h3>Bases de Données Relationnelles</h3>
+                        <div class="instructor">
+                            <span>👨‍🏫 Dr. Fatima Zahr</span>
+                        </div>
+                        <p>Concevez et optimisez des bases de données relationnelles avec SQL. Apprenez la normalisation, les index et les requêtes complexes pour gérer efficacement les données.</p>
+                        <div class="card-meta">
+                            <span>📅 14 semaines</span>
+                            <span>👥 42 étudiants</span>
+                            <span>⭐ 4.9/5</span>
+                        </div>
+                        <div class="card-topics">
+                            <span class="topic-tag">SQL</span>
+                            <span class="topic-tag">MySQL</span>
+                            <span class="topic-tag">Normalisation</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">Accéder au Cours</a>
+                            <a href="#" class="btn btn-secondary">Détails</a>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 4 -->
+                    <div class="resource-card course-card" data-type="course">
+                        <div class="card-header">
+                            <span class="course-badge">Cours</span>
+                            <span class="level-badge level-intermediate">Intermédiaire</span>
+                        </div>
+                        <h3>Frameworks Web: React & Node.js</h3>
+                        <div class="instructor">
+                            <span>👨‍🏫 Eng. Mohamed Saïdi</span>
+                        </div>
+                        <p>Construisez des applications web scalables avec React et Node.js. Maîtrisez les composants, les hooks, l'API REST et le développement full-stack moderne.</p>
+                        <div class="card-meta">
+                            <span>📅 16 semaines</span>
+                            <span>👥 35 étudiants</span>
+                            <span>⭐ 4.8/5</span>
+                        </div>
+                        <div class="card-topics">
+                            <span class="topic-tag">React</span>
+                            <span class="topic-tag">Node.js</span>
+                            <span class="topic-tag">REST API</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">Accéder au Cours</a>
+                            <a href="#" class="btn btn-secondary">Détails</a>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 5 -->
+                    <div class="resource-card course-card" data-type="course">
+                        <div class="card-header">
+                            <span class="course-badge">Cours</span>
+                            <span class="level-badge level-advanced">Avancé</span>
+                        </div>
+                        <h3>Machine Learning & Deep Learning</h3>
+                        <div class="instructor">
+                            <span>👨‍🏫 Dr. Leila Hamza</span>
+                        </div>
+                        <p>Explorez les algorithmes de machine learning et deep learning. Apprenez les réseaux de neurones, TensorFlow et PyTorch pour créer des modèles prédictifs puissants.</p>
+                        <div class="card-meta">
+                            <span>📅 18 semaines</span>
+                            <span>👥 28 étudiants</span>
+                            <span>⭐ 4.9/5</span>
+                        </div>
+                        <div class="card-topics">
+                            <span class="topic-tag">Python</span>
+                            <span class="topic-tag">TensorFlow</span>
+                            <span class="topic-tag">Deep Learning</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">Accéder au Cours</a>
+                            <a href="#" class="btn btn-secondary">Détails</a>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 6 -->
+                    <div class="resource-card course-card" data-type="course">
+                        <div class="card-header">
+                            <span class="course-badge">Cours</span>
+                            <span class="level-badge level-advanced">Avancé</span>
+                        </div>
+                        <h3>Architecture & DevOps</h3>
+                        <div class="instructor">
+                            <span>👨‍🏫 Dr. Khalid Romdhani</span>
+                        </div>
+                        <p>Maîtrisez l'architecture cloud, la containerisation avec Docker, l'orchestration Kubernetes et les pipelines CI/CD pour les déploiements automatisés.</p>
+                        <div class="card-meta">
+                            <span>📅 15 semaines</span>
+                            <span>👥 30 étudiants</span>
+                            <span>⭐ 4.8/5</span>
+                        </div>
+                        <div class="card-topics">
+                            <span class="topic-tag">Docker</span>
+                            <span class="topic-tag">Kubernetes</span>
+                            <span class="topic-tag">CI/CD</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">Accéder au Cours</a>
+                            <a href="#" class="btn btn-secondary">Détails</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assignments Section -->
+        <section class="assignments-section">
+            <div class="container">
+                <h2>📝 Devoirs et Projets</h2>
+                <div class="grid-2">
+                    <!-- Assignment Card 1 -->
+                    <div class="resource-card assignment-card" data-type="assignment">
+                        <div class="card-header">
+                            <span class="assignment-badge">Devoir</span>
+                            <span class="deadline-badge deadline-urgent">Urgent</span>
+                        </div>
+                        <h3>Projet: Site Web Responsive</h3>
+                        <div class="instructor">
+                            <span>👨‍🏫 Eng. Noor Abdelrahman</span>
+                        </div>
+                        <p>Créez un site web complètement responsive pour un client fictif. Le projet doit inclure HTML5, CSS3, JavaScript et être optimisé pour mobile.</p>
+                        <div class="assignment-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Date d'Échéance:</span>
+                                <span class="detail-value">15 Avril 2026</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Statut:</span>
+                                <span class="detail-value badge badge-warning">Non Soumis</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Points:</span>
+                                <span class="detail-value">20 pts</span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">Voir les Détails</a>
+                            <a href="#" class="btn btn-secondary">Télécharger le PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Assignment Card 2 -->
+                    <div class="resource-card assignment-card" data-type="assignment">
+                        <div class="card-header">
+                            <span class="assignment-badge">Devoir</span>
+                            <span class="deadline-badge deadline-normal">À Faire</span>
+                        </div>
+                        <h3>Exercices: Requêtes SQL Avancées</h3>
+                        <div class="instructor">
+                            <span>👨‍🏫 Dr. Fatima Zahr</span>
+                        </div>
+                        <p>Résolvez 15 exercices SQL couvrant les jointures complexes, les sous-requêtes et les agrégations. Soumettez vos requêtes avec les résultats.</p>
+                        <div class="assignment-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Date d'Échéance:</span>
+                                <span class="detail-value">20 Avril 2026</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Statut:</span>
+                                <span class="detail-value badge badge-warning">Non Soumis</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Points:</span>
+                                <span class="detail-value">15 pts</span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">Voir les Détails</a>
+                            <a href="#" class="btn btn-secondary">Télécharger les Exercices</a>
+                        </div>
+                    </div>
+
+                    <!-- Assignment Card 3 -->
+                    <div class="resource-card assignment-card" data-type="assignment">
+                        <div class="card-header">
+                            <span class="assignment-badge">Projet</span>
+                            <span class="deadline-badge deadline-done">Soumis</span>
+                        </div>
+                        <h3>Application React: Todo Manager</h3>
+                        <div class="instructor">
+                            <span>👨‍🏫 Eng. Mohamed Saïdi</span>
+                        </div>
+                        <p>Développez une application de gestion des tâches avec React incluant l'ajout, la modification, la suppression et la persistance des données.</p>
+                        <div class="assignment-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Date d'Échéance:</span>
+                                <span class="detail-value">10 Avril 2026</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Statut:</span>
+                                <span class="detail-value badge badge-success">Soumis</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Note:</span>
+                                <span class="detail-value">18/20</span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">Voir le Retour</a>
+                            <a href="#" class="btn btn-secondary">Mon Travail</a>
+                        </div>
+                    </div>
+
+                    <!-- Assignment Card 4 -->
+                    <div class="resource-card assignment-card" data-type="assignment">
+                        <div class="card-header">
+                            <span class="assignment-badge">Devoir</span>
+                            <span class="deadline-badge deadline-normal">À Faire</span>
+                        </div>
+                        <h3>Rapport: Architecture Logicielle</h3>
+                        <div class="instructor">
+                            <span>👨‍🏫 Dr. Ahmed Ben Ali</span>
+                        </div>
+                        <p>Écrivez un rapport analysant les patterns de design pour une application web. Incluez des diagrammes UML et une comparaison des approches.</p>
+                        <div class="assignment-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Date d'Échéance:</span>
+                                <span class="detail-value">22 Avril 2026</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Statut:</span>
+                                <span class="detail-value badge badge-warning">Non Soumis</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Points:</span>
+                                <span class="detail-value">25 pts</span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">Voir les Consignes</a>
+                            <a href="#" class="btn btn-secondary">Télécharger le Template</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Resources Section -->
+        <section class="video-section">
+            <div class="container">
+                <h2>🎥 Vidéos Pédagogiques</h2>
+                <div class="grid-3">
+                    <div class="resource-card video-card" data-type="video">
+                        <div class="video-thumbnail">
+                            <div class="placeholder-video">▶</div>
+                        </div>
+                        <h3>Introduction à HTML5</h3>
+                        <p>Découvrez les bases de HTML5 et la structure sémantique des documents web.</p>
+                        <div class="video-meta">
+                            <span>⏱️ 45 min</span>
+                            <span>👁️ 1,250 vues</span>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-full">Regarder</a>
+                    </div>
+
+                    <div class="resource-card video-card" data-type="video">
+                        <div class="video-thumbnail">
+                            <div class="placeholder-video">▶</div>
+                        </div>
+                        <h3>JavaScript: Les Closures Expliquées</h3>
+                        <p>Comprenez le concept des closures et leur importance en JavaScript.</p>
+                        <div class="video-meta">
+                            <span>⏱️ 38 min</span>
+                            <span>👁️ 890 vues</span>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-full">Regarder</a>
+                    </div>
+
+                    <div class="resource-card video-card" data-type="video">
+                        <div class="video-thumbnail">
+                            <div class="placeholder-video">▶</div>
+                        </div>
+                        <h3>SQL: Requêtes Jointes Avancées</h3>
+                        <p>Maîtrisez les différents types de jointures en SQL avec des exemples pratiques.</p>
+                        <div class="video-meta">
+                            <span>⏱️ 52 min</span>
+                            <span>👁️ 2,100 vues</span>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-full">Regarder</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Resources -->
+        <section class="download-section">
+            <div class="container">
+                <h2>📥 Ressources à Télécharger</h2>
+                <table class="resources-table">
+                    <thead>
+                        <tr>
+                            <th>Fichier</th>
+                            <th>Cours</th>
+                            <th>Type</th>
+                            <th>Taille</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>📄 HTML5_Complet.pdf</td>
+                            <td>Programmation Web</td>
+                            <td>Cours</td>
+                            <td>2.5 MB</td>
+                            <td>10/04/2026</td>
+                            <td><a href="fichier/Programmation Web - HTML - Partie 1.pdf" class="btn btn-mini" target="_blank">Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td>📊 CSS3_Avancé.zip</td>
+                            <td>Web Design</td>
+                            <td>Exercices</td>
+                            <td>1.8 MB</td>
+                            <td>08/04/2026</td>
+                            <td><a href="#" class="btn btn-mini">Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td>💻 JavaScript_Exemples.rar</td>
+                            <td>JavaScript</td>
+                            <td>Code Source</td>
+                            <td>3.2 MB</td>
+                            <td>05/04/2026</td>
+                            <td><a href="#" class="btn btn-mini">Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td>🗄️ SQL_Exercices.sql</td>
+                            <td>Bases de Données</td>
+                            <td>Exercices</td>
+                            <td>450 KB</td>
+                            <td>03/04/2026</td>
+                            <td><a href="#" class="btn btn-mini">Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td>🎨 Design_Patterns.pdf</td>
+                            <td>Architecture</td>
+                            <td>Documentation</td>
+                            <td>1.9 MB</td>
+                            <td>01/04/2026</td>
+                            <td><a href="#" class="btn btn-mini">Télécharger</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid-4">
+                <div class="footer-section">
+                    <h4>À Propos</h4>
+                    <ul>
+                        <li><a href="about.html">Notre Histoire</a></li>
+                        <li><a href="about.html">Notre Mission</a></li>
+                        <li><a href="about.html">Valeurs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Académique</h4>
+                    <ul>
+                        <li><a href="ressources.html">Ressources</a></li>
+                        <li><a href="etudiants.html">Étudiants</a></li>
+                        <li><a href="professeurs.html">Professeurs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connexion</h4>
+                    <ul>
+                        <li><a href="contact.html">Nous Contacter</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#facebook" class="social-icon">f</a>
+                        <a href="#twitter" class="social-icon">𝕏</a>
+                        <a href="#linkedin" class="social-icon">in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ENSI - École Nationale Supérieure d'Informatique. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

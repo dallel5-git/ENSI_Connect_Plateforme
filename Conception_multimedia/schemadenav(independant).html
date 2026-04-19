@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schéma de Navigation Officiel - ENSI</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --gold: #c5a059;
+            --line-gray: #cbd5e1;
+            --cta-orange: #e67e22;
+            --link-blue: #475569;
+            --action-green: #22c55e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 20px 40px 60px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ----- TITRE PRINCIPAL ----- */
+        .main-title {
+            color: var(--bg-dark);
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+            border-bottom: 5px solid var(--gold);
+            padding-bottom: 10px;
+        }
+
+        /* ----- NIV.0 : ACCUEIL ----- */
+        .node-root {
+            background: var(--bg-dark);
+            color: var(--gold);
+            padding: 15px 60px;
+            border-radius: 40px;
+            border: 2px solid var(--gold);
+            text-align: center;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* ----- LIGNES DE NAVIGATION ET MOTS DE PASSAGE ----- */
+        .nav-tree-lines {
+            width: 90%;
+            height: 80px;
+            position: relative;
+        }
+
+        .line-main-v {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 40px;
+            background: var(--gold);
+        }
+
+        .line-main-v::before {
+            content: "EXPLORATION";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 10px;
+            font-weight: bold;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
+        .line-horizontal {
+            position: absolute;
+            top: 40px;
+            left: 8%;
+            right: 8%;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        /* ----- CONTENEUR ----- */
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .passage-vertical {
+            width: 2px;
+            height: 30px;
+            background: var(--gold);
+            position: relative;
+        }
+        .passage-vertical::after {
+            content: "Accès";
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 9px;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        /* ----- NIV.1 : PAGES ----- */
+        .page-box {
+            background: var(--bg-dark);
+            color: white;
+            width: 100%;
+            padding: 12px 5px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 4px solid var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .page-box span { display: block; font-size: 0.75rem; color: #94a3b8; font-weight: normal; }
+
+        /* ----- NIV.2 : CONTENU (AVANT-DERNIER NIV) ----- */
+        .content-grid {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            padding: 4px;
+        }
+
+        .item {
+            font-size: 0.65rem;
+            padding: 6px 2px;
+            border: 1px solid #f8fafc;
+            text-align: center;
+            color: #334155;
+        }
+
+        /* ----- PASSAGE NIV.2 -> NIV.3 ----- */
+        .flow-arrow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px 0;
+            color: var(--line-gray);
+        }
+        .flow-text {
+            font-size: 9px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 2px;
+        }
+
+        /* ----- NIV.3 : ACTIONS (DERNIER NIV) ----- */
+        .btn-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .btn {
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .orange { background: var(--cta-orange); }
+        .blue { background: var(--link-blue); }
+        .green { background: var(--action-green); }
+
+        footer {
+            margin-top: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="main-title">Le Schéma de Navigation</h1>
+
+    <div class="node-root">
+        <strong>index.html — Accueil</strong><br>
+        <small>Architecture ENSI 2026</small>
+    </div>
+
+    <div class="nav-tree-lines">
+        <div class="line-main-v"></div>
+        <div class="line-horizontal"></div>
+    </div>
+
+    <div class="container">
+        
+        <div class="column">
+            <div class="passage-vertical"></div>
+            <div class="page-box">À Propos <span>about.html</span></div>
+            <div class="content-grid">
+                <div class="item">Mission</div>
+                <div class="item">Timeline</div>
+                <div class="item">Chiffres</div>
+                <div class="item">Valeurs</div>
+            </div>
+            <div class="flow-arrow">
+                <span class="flow-text">Détails</span>
+                <span>▼</span>
+            </div>
+            <div class="btn-group">
+                <div class="btn orange">Lire Plus</div>
+                <div class="btn orange">Contacter</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="passage-vertical"></div>
+            <div class="page-box">Professeurs <span>professeurs.html</span></div>
+            <div class="content-grid">
+                <div class="item">Domaines</div>
+                <div class="item">Fiches</div>
+                <div class="item">Recherche</div>
+                <div class="item">Horaires</div>
+            </div>
+            <div class="flow-arrow">
+                <span class="flow-text">Filtrage</span>
+                <span>▼</span>
+            </div>
+            <div class="btn-group">
+                <div class="btn orange">Filtrer</div>
+                <div class="btn blue">Réserver</div>
+                <div class="btn blue">Email</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="passage-vertical"></div>
+            <div class="page-box">Étudiants <span>etudiants.html</span></div>
+            <div class="content-grid">
+                <div class="item">Formulaire</div>
+                <div class="item">Annuaire</div>
+                <div class="item">Saisie CIN</div>
+                <div class="item">Notes</div>
+            </div>
+            <div class="flow-arrow">
+                <span class="flow-text">Vérification</span>
+                <span>▼</span>
+            </div>
+            <div class="btn-group">
+                <div class="btn blue">Soumettre</div>
+                <div class="btn orange">Valider CIN</div>
+                <div class="btn blue">Voir Notes</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="passage-vertical"></div>
+            <div class="page-box">Ressources <span>ressources.html</span></div>
+            <div class="content-grid">
+                <div class="item">6 Cours</div>
+                <div class="item">4 Projets</div>
+                <div class="item">Vidéos</div>
+                <div class="item">Téléch.</div>
+            </div>
+            <div class="flow-arrow">
+                <span class="flow-text">Transfert</span>
+                <span>▼</span>
+            </div>
+            <div class="btn-group">
+                <div class="btn blue">Voir Cours</div>
+                <div class="btn blue">Soumettre</div>
+                <div class="btn green">Télécharger</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="passage-vertical"></div>
+            <div class="page-box">Contact <span>contact.html</span></div>
+            <div class="content-grid">
+                <div class="item">Infos</div>
+                <div class="item">Message</div>
+                <div class="item">FAQ</div>
+                <div class="item">Newsletter</div>
+            </div>
+            <div class="flow-arrow">
+                <span class="flow-text">Interaction</span>
+                <span>▼</span>
+            </div>
+            <div class="btn-group">
+                <div class="btn blue">Envoyer</div>
+                <div class="btn blue">Toggle FAQ</div>
+                <div class="btn blue">S'abonner</div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div>ENSI - École Nationale Supérieure d'Informatique</div>
+        <div>v1.1 - 2026 | Document d'Architecture Web</div>
+    </footer>
+
+</body>
+</html>

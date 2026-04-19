@@ -1,0 +1,21 @@
+Synopsis du Projet : ENSI-Share1. 
+1..
+
+Intentions du ProjetL'objectif est de créer une plateforme numérique centrale pour l'École Nationale des Sciences de l'Informatique (ENSI). Contrairement à un site vitrine classique, ce dispositif vise à combler un manque de centralisation des ressources académiques en offrant un accès direct et organisé aux cours et examens pour les étudiants tunisiens.
+
+2..
+
+Scénarios mis en scène le dispositif digital s'articule autour de trois parcours utilisateurs principaux:
+
+	// Le Parcours Découverte : Le visiteur explore l'identité de l'école, découvre le corps enseignant et la structure des 			départements à travers des présentations multimédias (vidéos, galeries d'images).
+
+	// Le Parcours Académique (Cœur du site) : L'étudiant navigue de manière intuitive vers son niveau d'étude pour consulter, 		 visualiser ou télécharger des supports de cours et des archives d'examens.
+
+	// Le Parcours Collaboratif : Grâce à un espace dédié, les membres de la communauté peuvent soumettre de nouveaux documents via un formulaire intelligent, enrichissant ainsi la base de données de manière continue.
+
+3..
+
+Style des interactionsL'interaction se veut fluide et fonctionnelle. 
+Le site utilisera :Des menus de navigation clairs pour une circulation rapide entre les espaces "École", "Profs" et "Fichiers".
+Une interactivité dynamique côté client (Javascript) pour valider les envois de fichiers en temps réel.
+Une gestion robuste des données en arrière-plan (PHP/PDO) pour assurer la mise à jour instantanée des ressources partagées.
