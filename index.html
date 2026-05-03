@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENSI - École Nationale des Sciences de l'Informatique</title>
+    <meta name="description" content="Site officiel de l'ENSI - Formation d'excellence en informatique">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap" style="font-size:2rem;color:var(--primary)"></i>
+                <span>ENSI</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="professors.html">Professeurs</a></li>
+                <li><a href="students.html">Étudiants</a></li>
+                <li><a href="resources.html">Ressources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Connexion</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Bienvenue à l'<span>ENSI</span></h1>
+                <p>École Nationale des Sciences de l'Informatique - Formation d'excellence pour les futurs ingénieurs en informatique de Tunisie.</p>
+                <div class="hero-buttons">
+                    <a href="about.html" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Découvrir l'école
+                    </a>
+                    <a href="resources.html" class="btn btn-outline">
+                        <i class="fas fa-book"></i> Accéder aux cours
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/Logo ENSI avec cristal géométrique.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="number">600</div>
+                <div class="label"><i class="fas fa-user-graduate"></i> Étudiants</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">85</div>
+                <div class="label"><i class="fas fa-chalkboard-teacher"></i> Professeurs</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">35</div>
+                <div class="label"><i class="fas fa-award"></i> Années d'excellence</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">120</div>
+                <div class="label"><i class="fas fa-handshake"></i> Partenaires</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Nos Espaces</h2>
+            <p>Découvrez tous les espaces dédiés à notre communauté</p>
+        </div>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-image">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="card-content">
+                    <h3>L'École</h3>
+                    <p>Découvrez l'histoire, la mission et les valeurs de l'ENSI, référence en formation d'ingénieurs.</p>
+                    <a href="about.html" class="btn btn-primary">En savoir plus →</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Professeurs</h3>
+                    <p>Rencontrez notre corps professoral d'experts reconnus dans leurs domaines.</p>
+                    <a href="professors.html" class="btn btn-primary">Voir les profs →</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Étudiants</h3>
+                    <p>Espace dédié aux étudiants avec toutes les informations nécessaires à leur parcours.</p>
+                    <a href="students.html" class="btn btn-primary">Accéder →</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <i class="fas fa-folder-open"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Cours & Devoirs</h3>
+                    <p>Téléchargez vos cours, supports et devoirs en quelques clics.</p>
+                    <a href="resources.html" class="btn btn-primary">Télécharger →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-graduation-cap"></i> ENSI</h3>
+                <p>École Nationale des Sciences de l'Informatique - Formation d'excellence depuis 1984.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ENSI.tunisie" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://www.linkedin.com/school/ensitn/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@ecolenationaledessciencesdeiin" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="professors.html">Professeurs</a></li>
+                    <li><a href="students.html">Étudiants</a></li>
+                    <li><a href="resources.html">Ressources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Campus Universitaire Manouba</li>
+                    <li><i class="fas fa-phone"></i> +216 71 600 444</li>
+                    <li><i class="fas fa-envelope"></i> webmaster@ensi.rnu.tn</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Abonnez-vous pour recevoir nos actualités</p>
+                <form onsubmit="event.preventDefault(); alert('Merci de votre inscription!');">
+                    <input type="email" placeholder="Votre email" required style="width:100%;padding:0.75rem;border:none;border-radius:8px;margin-top:0.5rem;">
+                    <button type="submit" class="btn btn-primary" style="width:100%;margin-top:0.5rem;">S'abonner</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ENSI - Tous droits réservés | Projet Web II1</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>

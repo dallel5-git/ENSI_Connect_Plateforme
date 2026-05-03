@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ressources - ENSI</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap" style="font-size:2rem;color:var(--primary)"></i>
+                <span>ENSI</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="professors.html">Professeurs</a></li>
+                <li><a href="students.html">Étudiants</a></li>
+                <li><a href="resources.html" class="active">Ressources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Connexion</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section style="padding-top:120px;" class="section">
+        <div class="section-title">
+            <h2>Cours & Devoirs</h2>
+            <p>Téléchargez tous vos supports pédagogiques</p>
+        </div>
+
+        <!-- TABS -->
+        <div style="display:flex;gap:1rem;margin-bottom:2rem;justify-content:center;flex-wrap:wrap;">
+            <button class="btn btn-primary tab-btn active" style="color:var(--dark);" data-tab="all">📋 Tout</button>
+            <button class="btn btn-outline tab-btn" data-tab="cours" style="color:var(--dark);border-color:var(--dark);background: var(--light-gray);">📖 Cours</button>
+            <button class="btn btn-outline tab-btn" data-tab="td" style="color:var(--dark);border-color:var(--dark);background: var(--light-gray);">📝 TD</button>
+            <button class="btn btn-outline tab-btn" data-tab="tp" style="color:var(--dark);border-color:var(--dark);background: var(--light-gray);">💻 TP</button>
+            <button class="btn btn-outline tab-btn" data-tab="devoir" style="color:var(--dark);border-color:var(--dark);background: var(--light-gray);">📚 Devoirs</button>
+        </div>
+
+        <!-- RECHERCHE -->
+        <div style="margin-bottom:2rem;">
+            <input type="text" id="searchRes" placeholder="🔍 Rechercher une ressource..." 
+                style="width:100%;padding:0.75rem 1rem;border:2px solid var(--light-gray);border-radius:var(--radius);font-family:inherit;">
+        </div>
+
+        <!-- TABLE RESSOURCES -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th><i class="fas fa-file"></i> Titre</th>
+                        <th><i class="fas fa-book"></i> Matière</th>
+                        <th><i class="fas fa-tag"></i> Type</th>
+                        <th><i class="fas fa-user"></i> Professeur</th>
+                        <th><i class="fas fa-calendar"></i> Date</th>
+                        <th><i class="fas fa-download"></i> Action</th>
+                    </tr>
+                </thead>
+                <tbody id="resourcesTable">
+                    <!-- Généré par JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- BOUTON AJOUT (Visible si connecté) -->
+        <div id="uploadAction" style="margin-top:2rem; text-align:center; display:none;">
+            <button onclick="toggleUploadModal(true)" class="btn btn-primary">
+                <i class="fas fa-plus-circle"></i> Ajouter une ressource
+            </button>
+        </div>
+
+        <!-- MODAL D'UPLOAD -->
+        <div id="uploadModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:2000; align-items:center; justify-content:center;">
+            <div class="form-container" style="max-width:600px; width:90%; position:relative;">
+                <button onclick="toggleUploadModal(false)" style="position:absolute; top:1rem; right:1rem; border:none; background:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+                <h2 style="margin-bottom:1.5rem;"><i class="fas fa-file-upload"></i> Déposer un fichier</h2>
+                <form id="uploadForm">
+                    <div class="form-group">
+                        <label>Titre de la ressource</label>
+                        <input type="text" id="resTitle" name="title" placeholder="Ex: Support de cours PHP" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Matière</label>
+                        <select id="resSubject" name="subject_id" required>
+                            <option value="">Chargement des matières...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Type</label>
+                        <select id="resType" name="type" required>
+                            <option value="cours">📖 Cours</option>
+                            <option value="td">📝 TD</option>
+                            <option value="tp">💻 TP</option>
+                            <option value="devoir">📚 Devoir</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Fichier (PDF, Doc, Zip...)</label>
+                        <input type="file" id="resFile" name="file" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;">
+                        <i class="fas fa-cloud-upload-alt"></i> Envoyer le fichier
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-graduation-cap"></i> ENSI</h3>
+                <p>École Nationale des Sciences de l'Informatique - Formation d'excellence depuis 1984.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ENSI.tunisie" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://www.linkedin.com/school/ensitn/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@ecolenationaledessciencesdeiin" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="professors.html">Professeurs</a></li>
+                    <li><a href="students.html">Étudiants</a></li>
+                    <li><a href="resources.html">Ressources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Campus Universitaire Manouba</li>
+                    <li><i class="fas fa-phone"></i> +216 71 600 444</li>
+                    <li><i class="fas fa-envelope"></i> webmaster@ensi.rnu.tn</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Abonnez-vous pour recevoir nos actualités</p>
+                <form onsubmit="event.preventDefault(); alert('Merci de votre inscription!');">
+                    <input type="email" placeholder="Votre email" required style="width:100%;padding:0.75rem;border:none;border-radius:8px;margin-top:0.5rem;">
+                    <button type="submit" class="btn btn-primary" style="width:100%;margin-top:0.5rem;">S'abonner</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ENSI - Tous droits réservés | Projet Web II1</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/resources.js"></script>
+</body>
+</html>

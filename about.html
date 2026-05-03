@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - ENSI</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap" style="font-size:2rem;color:var(--primary)"></i>
+                <span>ENSI</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html" class="active">À propos</a></li>
+                <li><a href="professors.html">Professeurs</a></li>
+                <li><a href="students.html">Étudiants</a></li>
+                <li><a href="resources.html">Ressources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Connexion</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section style="padding-top:120px;" class="section">
+        <div class="section-title">
+            <h2>À propos de l'ENSI</h2>
+            <p>École Nationale des Sciences de l'Informatique</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-bottom:4rem;">
+            <div>
+                <h3 style="color:var(--primary);font-size:2rem;margin-bottom:1rem;">Notre Histoire</h3>
+                <p style="color:var(--gray);margin-bottom:1rem;line-height:1.8;">
+                    L'École Nationale des Sciences de l'Informatique (ENSI) a été créée en 1984 pour former des ingénieurs hautement qualifiés dans le domaine de l'informatique.
+                </p>
+                <p style="color:var(--gray);line-height:1.8;">
+                    Située au cœur du Campus Universitaire de la Manouba, l'ENSI est devenue une référence nationale et internationale dans la formation d'ingénieurs en informatique.
+                </p>
+            </div>
+            <div style="text-align:center;">
+                <div class="about-video">
+                    <video alt="ENSI" controls width="500px" muted>
+                        <source src="videos/ENSI.mp4" type="video/mp4"> 
+                    </video>
+                </div>
+                <div class="about-audio">
+                    <audio controls autoplay loop>
+                        <source src="audio/L_esprit_s_eveille.mp3" type="audio/mp3" >
+                    </audio>
+                </div>
+
+            </div>  
+        </div>
+
+        <!-- VALEURS -->
+        <div class="section-title">
+            <h2>Nos Valeurs</h2>
+        </div>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-content" style="text-align:center;padding:2rem;">
+                    <i class="fas fa-lightbulb" style="font-size:3rem;color:var(--secondary);margin-bottom:1rem;"></i>
+                    <h3>Excellence</h3>
+                    <p>Un enseignement de qualité mondiale pour former les meilleurs ingénieurs.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content" style="text-align:center;padding:2rem;">
+                    <i class="fas fa-rocket" style="font-size:3rem;color:var(--accent);margin-bottom:1rem;"></i>
+                    <h3>Innovation</h3>
+                    <p>Encourager la créativité et l'innovation dans tous les projets.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content" style="text-align:center;padding:2rem;">
+                    <i class="fas fa-users" style="font-size:3rem;color:var(--primary);margin-bottom:1rem;"></i>
+                    <h3>Collaboration</h3>
+                    <p>Travail d'équipe et partage de connaissances au cœur de notre pédagogie.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORMATIONS -->
+        <div class="section-title" style="margin-top:4rem;">
+            <h2>Nos Formations</h2>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Spécialité</th>
+                        <th>Durée</th>
+                        <th>Diplôme</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1ère Année</td>
+                        <td>Tronc Commun</td>
+                        <td>1 an</td>
+                        <td><span class="badge">Préparatoire</span></td>
+                    </tr>
+                    <tr>
+                        <td>2ème Année</td>
+                        <td>Génie Logiciel</td>
+                        <td>1 an</td>
+                        <td><span class="badge">Ingénieur</span></td>
+                    </tr>
+                    <tr>
+                        <td>3ème Année</td>
+                        <td>Systèmes Informatiques</td>
+                        <td>1 an</td>
+                        <td><span class="badge">Ingénieur</span></td>
+                    </tr>
+                    <tr>
+                        <td>Master</td>
+                        <td>Intelligence Artificielle</td>
+                        <td>2 ans</td>
+                        <td><span class="badge">Master</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-graduation-cap"></i> ENSI</h3>
+                <p>École Nationale des Sciences de l'Informatique - Formation d'excellence depuis 1984.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ENSI.tunisie" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://www.linkedin.com/school/ensitn/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@ecolenationaledessciencesdeiin" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="professors.html">Professeurs</a></li>
+                    <li><a href="students.html">Étudiants</a></li>
+                    <li><a href="resources.html">Ressources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Campus Universitaire Manouba</li>
+                    <li><i class="fas fa-phone"></i> +216 71 600 444</li>
+                    <li><i class="fas fa-envelope"></i> webmaster@ensi.rnu.tn</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Abonnez-vous pour recevoir nos actualités</p>
+                <form onsubmit="event.preventDefault(); alert('Merci de votre inscription!');">
+                    <input type="email" placeholder="Votre email" required style="width:100%;padding:0.75rem;border:none;border-radius:8px;margin-top:0.5rem;">
+                    <button type="submit" class="btn btn-primary" style="width:100%;margin-top:0.5rem;">S'abonner</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ENSI - Tous droits réservés | Projet Web II1</p>
+        </div>
+    </footer>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
