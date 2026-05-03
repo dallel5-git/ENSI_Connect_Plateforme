@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professeurs - ENSI</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap" style="font-size:2rem;color:var(--primary)"></i>
+                <span>ENSI</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="professors.html" class="active">Professeurs</a></li>
+                <li><a href="students.html">Étudiants</a></li>
+                <li><a href="resources.html">Ressources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Connexion</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section style="padding-top:120px;" class="section">
+        <div class="section-title">
+            <h2>Notre Corps Professoral</h2>
+            <p>Des experts dédiés à votre formation</p>
+        </div>
+
+        <!-- FILTRES -->
+        <div style="display:flex;gap:1rem;margin-bottom:2rem;flex-wrap:wrap;">
+            <input type="text" id="searchProf" placeholder="🔍 Rechercher un professeur..." 
+                style="flex:1;min-width:250px;padding:0.75rem 1rem;border:2px solid var(--light-gray);border-radius:var(--radius);font-family:inherit;">
+            <select id="filterDept" style="padding:0.75rem 1rem;border:2px solid var(--light-gray);border-radius:var(--radius);font-family:inherit;">
+                <option value="">Tous les départements</option>
+                <option value="info">Informatique</option>
+                <option value="math">Mathématiques</option>
+                <option value="reseau">Réseaux</option>
+                <option value="ia">IA & Data Science</option>
+            </select>
+        </div>
+
+        <!-- GRILLE PROFS -->
+        <div class="cards-grid" id="professorsGrid">
+            <!-- Généré par JS -->
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-graduation-cap"></i> ENSI</h3>
+                <p>École Nationale des Sciences de l'Informatique - Formation d'excellence depuis 1984.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ENSI.tunisie" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://www.linkedin.com/school/ensitn/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@ecolenationaledessciencesdeiin" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="professors.html">Professeurs</a></li>
+                    <li><a href="students.html">Étudiants</a></li>
+                    <li><a href="resources.html">Ressources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Campus Universitaire Manouba</li>
+                    <li><i class="fas fa-phone"></i> +216 71 600 444</li>
+                    <li><i class="fas fa-envelope"></i> webmaster@ensi.rnu.tn</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Abonnez-vous pour recevoir nos actualités</p>
+                <form onsubmit="event.preventDefault(); alert('Merci de votre inscription!');">
+                    <input type="email" placeholder="Votre email" required style="width:100%;padding:0.75rem;border:none;border-radius:8px;margin-top:0.5rem;">
+                    <button type="submit" class="btn btn-primary" style="width:100%;margin-top:0.5rem;">S'abonner</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ENSI - Tous droits réservés | Projet Web II1</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        const professors = [
+            {name:"Eng. Yemna Sayeb", dept:"info", subject:"Programmation Web", email:"yemna.sayeb@ensi-uma.tn.tn", icon:"fa-code"},
+            {name:"Dr. Amine Mezghich", dept:"ia", subject:"Intelligence Artificielle", email:"amine.mezghich@ensi-uma.tn.tn", icon:"fa-robot"},
+            {name:"Dr. Mohamed Trabelsi", dept:"reseau", subject:"Réseaux & Sécurité", email:"mohamed.trabelsi@ensi-uma.tn.tn", icon:"fa-network-wired"},
+            {name:"Prof. Aroua Hedhili", dept:"math", subject:"POO", email:"aroua.hedhili@ensi-uma.tn.tn", icon:"fa-square-root-variable"},
+            {name:"Dr. Raoudha Khcherif", dept:"info", subject:"Base de Données", email:"raoudha.khcherif@ensi-uma.tn.tn", icon:"fa-database"},
+            {name:"Prof. Karim Bouaffoura", dept:"ia", subject:"MIPS", email:"karim.bouaffoura@ensi-uma.tn.tn", icon:"fa-brain"},
+            {name:"Dr. Nacef Elloumi", dept:"reseau", subject:"Méthodes numériques", email:"nacef.elloumi@ensi-uma.tn.tn", icon:"fa-cloud"},
+            {name:"Prof. Amina Riahi", dept:"info", subject:"Génie Logiciel", email:"amina.riahi@ensi-uma.tn.tn", icon:"fa-laptop-code"}
+        ];
+
+        function renderProfs(list) {
+            const grid = document.getElementById('professorsGrid');
+            grid.innerHTML = list.map(p => `
+                <div class="card">
+                    <div class="card-image" style="background:linear-gradient(135deg,#1e40af,#3b82f6);">
+                        <i class="fas ${p.icon}"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>${p.name}</h3>
+                        <p><strong>Matière:</strong> ${p.subject}</p>
+                        <div class="card-meta">
+                            <span class="badge">${p.dept.toUpperCase()}</span>
+                            <a href="mailto:${p.email}" style="color:var(--primary);"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        renderProfs(professors);
+
+        document.getElementById('searchProf').addEventListener('input', e => {
+            const q = e.target.value.toLowerCase();
+            renderProfs(professors.filter(p => p.name.toLowerCase().includes(q) || p.subject.toLowerCase().includes(q)));
+        });
+
+        document.getElementById('filterDept').addEventListener('change', e => {
+            const d = e.target.value;
+            renderProfs(d ? professors.filter(p => p.dept === d) : professors);
+        });
+    </script>
+    <script src="js/api.js"></script>
+</body>
+</html>

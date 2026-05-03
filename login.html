@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - ENSI</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap" style="font-size:2rem;color:var(--primary)"></i>
+                <span>ENSI</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="resources.html">Ressources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding-top:120px;min-height:100vh;background:linear-gradient(135deg,#f3f4f6,#e5e7eb);display:flex;align-items:center;">
+        <div class="form-container">
+            <div style="text-align:center;margin-bottom:2rem;">
+                <i class="fas fa-user-circle" style="font-size:4rem;color:var(--primary);"></i>
+                <h2 style="margin-top:1rem;">Connexion</h2>
+                <p style="color:var(--gray);">Accédez à votre espace personnel</p>
+            </div>
+
+            <div id="alertBox" class="alert"></div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Profil</label>
+                    <select id="role" required>
+                        <option value="">Sélectionnez...</option>
+                        <option value="student">👨‍🎓 Étudiant</option>
+                        <option value="professor">👨‍🏫 Professeur</option>
+                        <option value="admin">👨‍💼 Administrateur</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="email" placeholder="votre.email@ensi.tn" required>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-lock"></i> Mot de passe</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-sign-in-alt"></i> Se connecter
+                </button>
+
+                <p style="text-align:center;margin-top:1.5rem;">
+                    Pas de compte ? <a href="register.html" style="color:var(--primary);font-weight:600;">S'inscrire</a>
+                </p>
+            </form>
+
+            <div style="margin-top:2rem;padding:1rem;background:var(--light-gray);border-radius:var(--radius);font-size:0.875rem;">
+                <strong>💡 Comptes de démonstration :</strong><br>
+                Admin: admin@ensi.tn / admin<br>
+                Prof: a.benali@ensi.tn / 1234<br>
+                Étudiant: a.khouaja@ensi.tn / 1234
+            </div>
+        </div>
+    </section>
+
+    <!-- ⚠️ IMPORTANT : Charger api.js AVANT auth.js -->
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
