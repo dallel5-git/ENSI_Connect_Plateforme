@@ -1,34 +1,34 @@
 # 🎓 Plateforme Académique ENSI
 
-[![PHP Version](https://img.shields.io/badge/PHP-8.x-777bb4?style=flat-square&logo=php)](https://www.php.net/)
-[![MySQL](https://img.shields.io/badge/MySQL-8.x-4479a1?style=flat-square&logo=mysql)](https://www.mysql.com/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-f7df1e?style=flat-square&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![CSS](https://img.shields.io/badge/CSS-Modern-1572b6?style=flat-square&logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![PHP Version]
+[![MySQL]
+[![JavaScript]
+[![CSS]
 
 Une plateforme web moderne et performante conçue pour l'**École Nationale des Sciences de l'Informatique (ENSI)**. Ce projet permet la gestion des ressources pédagogiques, des profils académiques (étudiants et professeurs) et facilite la communication au sein de l'école.
 
 ---
 
-## ✨ Fonctionnalités Clés
+##  Fonctionnalités Clés
 
-### 👤 Gestion des Utilisateurs
+###  Gestion des Utilisateurs
 - **Espaces Dédiés** : Interfaces spécifiques pour les étudiants, les professeurs et les administrateurs.
 - **Authentification** : Système de connexion et d'inscription sécurisé (migration vers un stockage local pour la fluidité).
 - **Profils Personnalisés** : Gestion des informations personnelles, départements et spécialités.
 
-### 📚 Centre de Ressources
+### Centre de Ressources
 - **Dépôt de Documents** : Les professeurs peuvent uploader des cours, TD, TP et devoirs.
 - **Téléchargement** : Accès rapide aux supports de cours pour les étudiants.
 - **Organisation par Matière** : Classement intuitif par matières et niveaux.
 
-### 🏛️ Vie de l'École
+### Vie de l'École
 - **Annuaire Académique** : Listes interactives des professeurs et des étudiants.
 - **Actualités** : Affichage des derniers événements et annonces de l'école.
 - **Contact** : Formulaire de contact intégré avec suivi des messages.
 
 ---
 
-## 🛠️ Stack Technique
+## Stack Technique
 
 - **Frontend** : HTML5, CSS3 (Design moderne, Glassmorphism, Responsive), JavaScript Vanilla.
 - **Backend** : PHP (Architecture API-first).
@@ -37,7 +37,7 @@ Une plateforme web moderne et performante conçue pour l'**École Nationale des 
 
 ---
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 ```text
 ├── backend/
@@ -80,7 +80,7 @@ Une plateforme web moderne et performante conçue pour l'**École Nationale des 
 
 ---
 
-## 🔐 Identifiants par Défaut (Test)
+## Identifiants par Défaut (Test)
 
 | Rôle | Email | Mot de passe |
 | :--- | :--- | :--- |
@@ -90,6 +90,6 @@ Une plateforme web moderne et performante conçue pour l'**École Nationale des 
 
 ---
 
-## 📄 Licence
+## Licence
 
 Ce projet a été réalisé dans le cadre du module **Projet Web II1** à l'ENSI. Tous droits réservés &copy; 2026.
